@@ -31,11 +31,11 @@
       <Transition name="fade-slide">
         <div v-if="show" key="main-content" class="relative z-10 backdrop-blur-md bg-white/30 dark-mode:bg-gray-800/50 rounded-xl shadow-lg p-10 w-full max-w-3xl text-center">
           <h1 class="text-4xl font-bold mb-4 text-lime-700 dark-mode:text-white">Sobre Mí</h1>
-          <div class="mt-7">
+          <div class="mt-7 flex justify-center">
             <img 
               :src="currentImage"
               alt="Mi Foto"
-              class="w-40 h-40 rounded-full mx-auto shadow-lg"
+              class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-lime-300 shadow-xl bg-white"
               data-aos="flip-left"
               data-aos-duration="8000"
             />
@@ -107,7 +107,7 @@ const handleScroll = () => {
   if (currentScroll < lastScroll) {
     // Si sube, muestra todo y cambia la imagen si quieres
     show.value = true
-    currentImage.value = '/OIP.png' // Cambia aquí la imagen al subir
+    currentImage.value = '/sergio.png' // Cambia aquí la imagen al subir
   } else {
     // Si baja, oculta todo y vuelve a la original
     show.value = false
