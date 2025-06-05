@@ -42,10 +42,10 @@
           </div>
           <p class="text-lg text-lime-900 dark-mode:text-white">
             ¡Hola! Soy
-            <strong class="text-lime-700 dark-mode:text-lime-200">sergio portela</strong>, un apasionado
-            desarrollador especializado en tecnologías web como Vue, Nuxt y
-            TailwindCSS. Me encanta crear experiencias digitales dinámicas y
-            optimizadas.
+            <strong class="text-lime-700 dark-mode:text-lime-200">sergio portela</strong>, Soy un estudiante avanzado de Ingeniería de Software con una fuerte motivación, compromiso y responsabilidad. Me adapto rápidamente a nuevas tecnologıas y entornos, y
+            Me destaco por mi capacidad para resolver problemas de manera proactiva. Busco oportunidades que me permitan aplicar y mejorar mis habilidades en entornos dinámicos y
+            colaborativos.
+
           </p>
           <!-- Sección de habilidades -->
           <div class="mt-6">
@@ -65,7 +65,7 @@
           <Transition name="bounce">
             <a
               v-if="show"
-              href="/cv.pdf"
+              href="/sergio.pdf"
               target="_blank"
               rel="noopener"
               class="inline-block mt-4 px-6 py-2 bg-lime-600 text-white rounded-lg font-semibold shadow hover:bg-lime-700 transition dark-mode:bg-gray-700"
@@ -107,7 +107,7 @@ const handleScroll = () => {
   if (currentScroll < lastScroll) {
     // Si sube, muestra todo y cambia la imagen si quieres
     show.value = true
-    currentImage.value = '/sergio.png' // Cambia aquí la imagen al subir
+    currentImage.value = '/sergio.png' // Cambia aquí la imagen al subir po la imagen que quieras
   } else {
     // Si baja, oculta todo y vuelve a la original
     show.value = false
@@ -160,5 +160,5 @@ onUnmounted(() => {
   transform: translateY(0);
 }
 
-/* ...resto de tus estilos... */
+/* ...resto de estilos que quieras */
 </style>

@@ -49,7 +49,7 @@
             </h2>
           </Transition>
           <p class="font-light text-center text-lime-700 sm:text-xl dark-mode:text-white">
-            ¿Tienes una idea, proyecto o simplemente quieres saludar? ¡Envíame un mensaje!
+            ¿Tienes una idea, proyecto o simplemente quieres contactarme? ¡Envíame un mensaje!
           </p>
         </div>
         <div class="mb-8">
