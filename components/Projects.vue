@@ -130,16 +130,15 @@ const projects = [
     name: 'Proyecto Epsilon',
     description: 'Un blog personal con integración de CMS.',
     image: '/portafolio.png',
-    demoUrl: '#',
-    codeUrl: '#',
+    demoUrl: '',
+    codeUrl: 'https://github.com/papitorico123/protafolio',
   },
   {
     id: 6,
     name: 'Proyecto Zeta',
     description: 'Una herramienta de análisis de datos.',
     video: '/reconocimiento.mp4', // <-- minúscula y ruta correcta
-    demoUrl: '#',
-    codeUrl: '#',
+    codeUrl: 'https://github.com/papitorico123/reconocimiento/tree/master',
   },
 ];
 </script>
