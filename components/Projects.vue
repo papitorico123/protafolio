@@ -39,17 +39,26 @@
             :key="project.id"
             class="bg-lime-50 border border-lime-200 rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col dark-mode:bg-gray-900 dark-mode:border-gray-700 relative"
           >
-            <!-- Limón en cada tarjeta (puedes animar si quieres) -->
+            <!-- Limón en cada tarjeta -->
             <img
               src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f34b.png"
               alt="Limón"
               class="absolute right-2 top-2 w-7 h-7 opacity-60"
             />
-            <img
-              :src="project.image"
-              :alt="project.name"
-              class="w-full h-40 object-cover rounded-t-xl"
-            />
+            <template v-if="project.video">
+              <video
+                :src="project.video"
+                controls
+                class="w-full h-40 object-cover rounded-t-xl"
+              ></video>
+            </template>
+            <template v-else>
+              <img
+                :src="project.image"
+                :alt="project.name"
+                class="w-full h-40 object-cover rounded-t-xl"
+              />
+            </template>
             <div class="p-5 flex-1 flex flex-col">
               <h3 class="text-xl font-bold text-lime-700 mb-2 dark-mode:text-lime-200 flex items-center gap-2">
                 {{ project.name }}
@@ -60,7 +69,7 @@
                 <a
                   :href="project.demoUrl"
                   target="_blank"
-                  class="inline-block px-4 py-2 bg-lime-600 text-white rounded-lg font-semibold shadow hover:bg-lime-700 transition dark-mode:bg-gray-700 flex items-center gap-2"
+                  class="inline-block px-4 py-2 bg-lime-600 text-white rounded-lg font-semibold shadow hover:bg-lime-700 transition dark-mode:bg-gray-700 items-center gap-2"
                 >
                   Ver Demo
                   <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f34b.png" alt="Limón" class="w-4 h-4 inline-block" />
@@ -68,7 +77,7 @@
                 <a
                   :href="project.codeUrl"
                   target="_blank"
-                  class="inline-block px-4 py-2 bg-white border border-lime-400 text-lime-700 rounded-lg font-semibold shadow hover:bg-lime-100 transition dark-mode:bg-gray-800 dark-mode:border-gray-600 dark-mode:text-lime-100 flex items-center gap-2"
+                  class="inline-block px-4 py-2 bg-white border border-lime-400 text-lime-700 rounded-lg font-semibold shadow hover:bg-lime-100 transition dark-mode:bg-gray-800 dark-mode:border-gray-600 dark-mode:text-lime-100 items-center gap-2"
                 >
                   Código
                   <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f34b.png" alt="Limón" class="w-4 h-4 inline-block" />
@@ -88,41 +97,39 @@ const isDarkMode = useState('isDarkMode', () => false)
 const projects = [
   {
     id: 1,
-    name: 'Proyecto Alpha',
+    name: 'reconstruccion pagina web boca latina',
     description: 'Una plataforma de gestión de tareas.',
-    image: 'https://via.placeholder.com/400x200',
-    demoUrl: '#',
+    image: '/bocalatina.png',
+    demoUrl: 'https://qbdwmqgc-5500.use2.devtunnels.ms/',
     codeUrl: '#',
   },
   {
     id: 2,
     name: 'Proyecto Beta',
     description: 'Un sitio web de comercio electrónico.',
-    image: 'https://via.placeholder.com/400x200',
-    demoUrl: '#',
+    image: '/image.png',
+    demoUrl: 'https://bockstack.vercel.app/chat',
     codeUrl: '#',
   },
   {
     id: 3,
     name: 'Proyecto Gamma',
     description: 'Una aplicación móvil de seguimiento de fitness.',
-    image: 'https://via.placeholder.com/400x200',
-    demoUrl: '#',
-    codeUrl: '#',
+    image: '/atix.png',
+    codeUrl: 'https://github.com/Morenito23302/Atix-Stock',
   },
   {
     id: 4,
     name: 'Proyecto Delta',
     description: 'Un sistema de gestión de inventarios.',
-    image: 'https://via.placeholder.com/400x200',
-    demoUrl: '#',
-    codeUrl: '#',
+    image: '/devtre.png',
+    codeUrl: 'https://github.com/papitorico123/devtree',
   },
   {
     id: 5,
     name: 'Proyecto Epsilon',
     description: 'Un blog personal con integración de CMS.',
-    image: 'https://via.placeholder.com/400x200',
+    image: '/portafolio.png',
     demoUrl: '#',
     codeUrl: '#',
   },
@@ -130,7 +137,7 @@ const projects = [
     id: 6,
     name: 'Proyecto Zeta',
     description: 'Una herramienta de análisis de datos.',
-    image: 'https://via.placeholder.com/400x200',
+    video: '/reconocimiento.mp4', // <-- minúscula y ruta correcta
     demoUrl: '#',
     codeUrl: '#',
   },
