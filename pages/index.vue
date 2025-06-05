@@ -2,8 +2,8 @@
   
   <Navbar />
   <Home />
-  <Contact />
   <Projects />
+  <Contact />
   <Footer />
 
 
