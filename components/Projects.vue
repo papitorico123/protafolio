@@ -65,8 +65,9 @@
                 <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f34b.png" alt="Limón" class="w-5 h-5 inline-block" />
               </h3>
               <p class="text-lime-900 mb-4 flex-1 dark-mode:text-lime-100">{{ project.description }}</p>
-              <div class="flex space-x-4 mt-auto">
+              <div class="flex flex-col items-center space-y-2 mt-auto">
                 <a
+                  v-if="project.demoUrl"
                   :href="project.demoUrl"
                   target="_blank"
                   class="inline-block px-4 py-2 bg-lime-600 text-white rounded-lg font-semibold shadow hover:bg-lime-700 transition dark-mode:bg-gray-700 items-center gap-2"
@@ -101,7 +102,7 @@ const projects = [
     description: 'Una plataforma de gestión de tareas.',
     image: '/bocalatina.png',
     demoUrl: 'https://qbdwmqgc-5500.use2.devtunnels.ms/',
-    codeUrl: '#',
+    codeUrl: 'https://github.com/papitorico123/remakeboca',
   },
   {
     id: 2,
@@ -109,7 +110,7 @@ const projects = [
     description: 'Un sitio web de comercio electrónico.',
     image: '/image.png',
     demoUrl: 'https://bockstack.vercel.app/chat',
-    codeUrl: '#',
+    codeUrl: 'https://github.com/papitorico123/bockstack',
   },
   {
     id: 3,

@@ -33,7 +33,7 @@
           <h1 class="text-4xl font-bold mb-4 text-lime-700 dark-mode:text-white">Sobre Mí</h1>
           <div class="mt-7">
             <img 
-              src="/images3.png"
+              :src="currentImage"
               alt="Mi Foto"
               class="w-40 h-40 rounded-full mx-auto shadow-lg"
               data-aos="flip-left"
@@ -85,6 +85,8 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const isDarkMode = useState('isDarkMode', () => false)
 const show = ref(true)
+const currentImage = ref('/sergio.png')
+
 const skills = [
   { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript" },
   { name: "Vue.js", logo: "https://cdn.simpleicons.org/vue.js" },
@@ -98,11 +100,24 @@ const skills = [
   { name: "typescript", logo: "https://cdn.simpleicons.org/typescript" },
 ]
 
+let lastScroll = 0
+
 const handleScroll = () => {
-  show.value = window.scrollY < 100
+  const currentScroll = window.scrollY
+  if (currentScroll < lastScroll) {
+    // Si sube, muestra todo y cambia la imagen si quieres
+    show.value = true
+    currentImage.value = '/OIP.png' // Cambia aquí la imagen al subir
+  } else {
+    // Si baja, oculta todo y vuelve a la original
+    show.value = false
+    currentImage.value = '/sergio.png'
+  }
+  lastScroll = currentScroll
 }
 
 onMounted(() => {
+  lastScroll = window.scrollY
   window.addEventListener('scroll', handleScroll)
 })
 
@@ -132,6 +147,17 @@ onUnmounted(() => {
 }
 .animate-cube-right {
   animation: cube-right 3s ease-in-out infinite;
+}
+.fade-slide-enter-active, .fade-slide-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+.fade-slide-enter-from, .fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+.fade-slide-enter-to, .fade-slide-leave-from {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ...resto de tus estilos... */

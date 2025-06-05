@@ -41,12 +41,16 @@
           <Transition name="title-fade-slide">
             <h2
               v-if="show"
-              class="select-none mb-2 text-4xl tracking-tight font-extrabold text-center text-lime-700 animated-underline shadow-title dark-mode:text-white"
+              class="select-none mb-2 text-4xl tracking-tight font-extrabold text-center text-lime-700 animated-underline shadow-title dark-mode:text-white flex items-center justify-center gap-2"
             >
-              contactame
+              <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4e7.png" alt="Mail" class="w-8 h-8 inline-block" />
+              ¡Hablemos! <span class="text-lime-500">Contáctame</span>
+              <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4e7.png" alt="Mail" class="w-8 h-8 inline-block" />
             </h2>
           </Transition>
-          <p class="font-light text-center text-lime-700 sm:text-xl dark-mode:text-white">302667506</p>
+          <p class="font-light text-center text-lime-700 sm:text-xl dark-mode:text-white">
+            ¿Tienes una idea, proyecto o simplemente quieres saludar? ¡Envíame un mensaje!
+          </p>
         </div>
         <div class="mb-8">
           <Transition name="title-fade-slide">
@@ -57,7 +61,7 @@
               correo
             </h2>
           </Transition>
-          <p class="font-light text-center text-lime-700 sm:text-xl dark-mode:text-white">sergiodavid432@gmail.com</p>
+          <p class="font-light text-center text-lime-700 sm:text-xl dark-mode:text-white"></p>
         </div>
         <div v-if="success" class="p-4 mb-6 text-green-800 bg-green-100 rounded-lg text-center font-bold">
           ¡Mensaje enviado con éxito!
