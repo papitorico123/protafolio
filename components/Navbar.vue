@@ -24,7 +24,7 @@
           : 'flex flex-col font-medium p-4 md:p-0 mt-4 border border-lime-100 rounded-lg bg-lime-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent'"
         >
           <li>
-            <a href="https://github.com/sergiodavid432" target="_blank"
+            <a href="https://github.com/papitorico123" target="_blank"
               :class="isDarkMode
                 ? 'flex items-center gap-2 py-2 px-3 text-white rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-lime-300 md:p-0'
                 : 'flex items-center gap-2 py-2 px-3 text-lime-900 rounded-sm hover:bg-lime-100 md:hover:bg-transparent md:border-0 md:hover:text-lime-700 md:p-0'"
@@ -34,7 +34,7 @@
             </a>
           </li>
           <li>
-            <a href="https://wa.me/30026627596" target="_blank"
+            <a href="https://wa.me/3027964981" target="_blank"
               :class="isDarkMode
                 ? 'flex items-center gap-2 py-2 px-3 text-white rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-lime-300 md:p-0'
                 : 'flex items-center gap-2 py-2 px-3 text-lime-900 rounded-sm hover:bg-lime-100 md:hover:bg-transparent md:border-0 md:hover:text-lime-700 md:p-0'"
