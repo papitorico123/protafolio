@@ -138,8 +138,8 @@ const projects = [
     id: 6,
     name: 'Proyecto Reconocimiento',
     description: 'un dron con ia que detecta movimientos humanos.',
-    video: '/reconocimiento.mp4', // <-- minúscula y ruta correcta
-    codeUrl: 'https://github.com/papitorico123/reconocimiento/tree/master',
+    video: '/reconocimiento.mp4', 
+    codeUrl: 'https://github.com/papitorico123/reconocimiento',
   },
 ];
 </script>
