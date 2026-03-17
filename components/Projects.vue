@@ -107,10 +107,10 @@ const projects = [
   {
     id: 2,
     name: 'bockstack',
-    description: 'una aplicacion en demo con un chat para recomendador de libros',
-    image: '/image.png',
-    demoUrl: 'https://bockstack.vercel.app/chat',
-    codeUrl: 'https://github.com/papitorico123/bockstack',
+    description: 'Pagina web para la ips aurum clinica',
+    image: '/aurum.png',
+    demoUrl: 'https://practica-9eae7.web.app/',
+    codeUrl: 'https://github.com/papitorico123/paginaaurum1',
   },
   {
     id: 3,
